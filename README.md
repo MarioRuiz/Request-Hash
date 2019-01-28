@@ -156,6 +156,27 @@ In case data is supplied as a Hash and no Content-Type supplied on headers key, 
 
 ```
 
+### data_pattern
+(Hash) (Optional) It will be specified the pattern of the fields if any. It can be supplied a Regular Expression or a String Pattern from the string_pattern gem: https://github.com/MarioRuiz/string_pattern
+
+```ruby
+{
+  path: '/customer/add',
+  data: {
+    name: 'Peter Smith',
+    address: 'Sol Av, 33',
+    city: 'Los Angeles',
+    ccid: '463811e7-9760-acf5-9bdb-020073ca3333',
+    petids: [122, 333, 444]
+  },
+  data_pattern: {
+    name: :'10-40:Ln', #using string_pattern gem
+    ccid: /^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$/ # using regular expression
+  }
+}
+
+```
+
 ### mock_response
 (Hash) (Optional) Contains the default mock response in case we want to mock the response for testing services that are not implemented yet. It needs to contain at least the keys :code, :message and :data and it can contain :headers hash
 
