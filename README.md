@@ -1,4 +1,4 @@
-# Request-Hash
+# Request Hash
 The purpose of this document is to describe and specify the different keys a Ruby Hash can contain to supply the necessary information for a http request to be executed. This documentation is just a mere indication for Ruby devs and testers so can be used to exchange requests data between libraries, users, gems...
 
 If you want to take these requests to the next level, being able to generate random data following patterns and much more, take a look at our sister project nice_hash: https://github.com/MarioRuiz/nice_hash
