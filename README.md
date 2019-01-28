@@ -126,6 +126,22 @@ In case data is supplied as a Hash and no Content-Type supplied on headers key, 
 }
 ```
 
+### data_required
+(Array) (Optional) IN case of data supplied we can specify here which keys are required to be included on the data request so they are not optional when sending the data
+
+```ruby
+{
+  path: '/customer/add',
+  data: {
+    name: 'Peter Smith',
+    address: 'Sol Av, 33',
+    city: 'Los Angeles',
+    petids: [122, 333, 444]
+  },
+  data_required: [ :name, :petids ]
+}
+
+```
 
 ### mock_response
 (Hash) (Optional) Contains the default mock response in case we want to mock the response for testing services that are not implemented yet. It needs to contain at least the keys :code, :message and :data and it can contain :headers hash
