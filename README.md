@@ -55,6 +55,19 @@ end
 
 ```
 
+In case some parameters are required for the request to be send, then they should be added as mandatory parameters on the method, if they are optional then they should be added as optional parameters:
+
+```ruby
+
+        ## id is necessary to be sent
+        ## tag and limit are optional parameters
+        def self.find_pet_by_id(id, tags: "", limit: "")
+          {
+            path: "/api/pets/#{id}?tags=#{tags}&limit=#{limit}&"
+          }
+        end
+```
+
 
 ## keys
 We describe here all the available keys that are necessary for the different http methods
