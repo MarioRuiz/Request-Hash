@@ -19,7 +19,7 @@ The keys of the hash should be symbols:
 ```
 
 The Request Hashes should be organized on different modules, at least under one module. 
-The request hashes should be defined as the response of a method.
+The request hashes should be defined as the value returned from a method.
 
 ```ruby
 ##################################################
@@ -55,7 +55,7 @@ end
 
 ```
 
-In case some parameters are required for the request to be send, then they should be added as mandatory parameters on the method, if they are optional then they should be added as optional parameters:
+In case some parameters are required for the request to be sent, then they should be added as mandatory parameters on the method, if they are optional then they should be added as optional parameters:
 
 ```ruby
 
