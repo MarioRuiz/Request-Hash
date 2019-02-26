@@ -211,7 +211,7 @@ In case data is supplied as a Hash and no Content-Type supplied on headers key, 
 ```
 
 ### responses
-(Hash) (Optional) All the possible responses for the request. They key is the code of the response and the value is the response data body.
+(Hash) (Optional) All the possible responses for the request. They key is the code of the response and the value is the response data body. The first response will be taken like the successful response.
 
 ```ruby
         def self.find_pets()
