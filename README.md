@@ -72,6 +72,9 @@ In case some parameters are required for the request to be sent, then they shoul
 ## keys
 We describe here all the available keys that are necessary for the different http methods
 
+### name
+(String) (Optional) Descriptive name for the request. Usually the module name and the method name, for example: Customer.list_products
+
 ### path
 (String) Supply the path for the request to be executed. By default it is recommended to use relative paths instead of absolute so requests can be executed without any change on different hosts.
 This key is used by all http requests.
